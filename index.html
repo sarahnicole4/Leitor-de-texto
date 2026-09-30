@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>leitor de texto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Leitor de texto </h1>
+        <textarea id="text" cols="30" rows="10" placeholder="insira o texto que quer ler..."></textarea>
+        <button id="btn">Falar</button>
+
+
+    </div>
+
+    <script src="style.js"></script>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('./sw.js')
+            .then(() => console.log('Service Worker registrado com sucesso!'))
+            .catch(err => console.log('Erro ao registrar o Service Worker:', err));
+        }
+    </script>
+
+    
+</body>
+</html>
